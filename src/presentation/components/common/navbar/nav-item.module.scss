@@ -1,0 +1,19 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.single-nav-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+
+  .item-label {
+    @include display-flex(center, none);
+    @include hover;
+    color: $color-darkHigh;
+    font-size: 1.1rem;
+    gap: 0.5rem;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

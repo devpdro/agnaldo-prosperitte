@@ -1,0 +1,100 @@
+@import '../../../styles/themes/light.scss';
+@import '../../../styles/themes/mixins.scss';
+
+.navbar {
+  @include display-flex(center, space-between);
+  box-shadow: rgba(0, 0, 0, 0.16) 0 0.06rem 0.25rem;
+  position: fixed;
+  background-color: $color-primary;
+  font-weight: $weight-default;
+  height: 5.5rem;
+  z-index: 999;
+  width: 100%;
+}
+
+.container {
+  @include display-flex(center, space-between);
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.2rem 1.7rem;
+}
+
+.left-section {
+  @include display-flex(center, flex-start);
+  gap: 1rem;
+
+  .logo {
+    width: 200px;
+    height: 58px;
+  }
+}
+
+.nav-items {
+  display: none;
+
+  @media (min-width: 1264px) {
+    @include display-flex(center, center);
+    padding: 2rem;
+
+    .nav-link {
+      @include hover;
+      position: relative;
+      padding: 1rem 0.7rem;
+      font-weight: 300;
+
+      .link-text {
+        @include display-flex(center, center);
+        color: $color-snow;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        gap: 0.4rem;
+        transition: color 0.1s ease;
+
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+}
+
+.right-section {
+  @include display-flex;
+  @include hover;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+  margin-left: 1.25rem;
+  background-color: $color-success;
+  color: $color-snow;
+  font-weight: 400;
+
+  .link {
+    color: inherit;
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 1124px) {
+    display: none;
+  }
+
+  @media (min-width: 1264px) {
+    display: flex;
+  }
+}
+
+.menu-icon {
+  @include hover;
+  display: block;
+  font-size: $font-medium;
+  color: $color-secondary;
+
+  @media (min-width: 1264px) {
+    display: none;
+  }
+}
