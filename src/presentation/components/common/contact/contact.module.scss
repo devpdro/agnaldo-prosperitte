@@ -1,215 +1,361 @@
 .contactSection {
-    width: 100%;
-    background-color: #F5F6FA;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px 0 24px 0;
-}
+  padding: 80px 0;
 
-.contactBox {
-    background: #fff;
-    border-radius: 24px;
-    box-shadow: 0 8px 32px 0 rgba(44, 41, 74, 0.10);
-    padding: 48px 32px 48px 32px;
-    max-width: 1300px;
-    width: 95%;
-    margin: 3rem auto 3rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
 
-.title {
-    font-size: 2.6rem;
-    font-weight: 600;
-    color: #100f30;
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.subtitle {
-    color: #757575;
-    font-size: 1.15rem;
-    text-align: center;
-    margin-bottom: 48px;
-}
-
-.cardsGrid {
-    display: flex;
-    gap: 32px;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background: #f7f7f7;
-    border-radius: 16px;
-    box-shadow: none;
-    padding: 40px 32px 32px 32px;
-    min-width: 320px;
-    max-width: 370px;
-    flex: 1 1 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 0;
-}
-
-.iconCircle {
-    background: #FACA5D;
-    border-radius: 50%;
-    width: 64px;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 24px;
-}
-
-.cardTitle {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #100f30;
-    margin-bottom: 12px;
-}
-
-.cardDesc {
-    color: #757575;
-    font-size: 1rem;
-    text-align: center;
-    margin-bottom: 32px;
-}
-
-.cardBtn {
-    background: #100f30;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    border-radius: 24px;
-    padding: 12px 32px;
-    font-size: 15px;
-    line-height: 16px;
-    cursor: pointer;
-    transition: background 0.2s;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.cardBtn:hover {
-    background: #19243f;
-}
-
-.whatsappCard {
-    background: #faf9f7 !important;
-    border-radius: 18px;
-    box-shadow: 0 2px 16px 0 rgba(44, 41, 74, 0.10);
-    padding: 32px 16px 32px 16px !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .container {
+    max-width: 1280px;
     margin: 0 auto;
-    max-width: 370px;
-}
+    padding: 0 1.075rem;
 
-.iconWhatsapp {
-    background: #fffbe6 !important;
-    border: 3px solid #faca5d;
-    width: 64px !important;
-    height: 64px !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 18px;
-    margin-top: 0;
-}
-
-.btnWhatsapp {
-    background: #100f30 !important;
-    color: #fff !important;
-    font-weight: 700;
-    border-radius: 24px;
-    padding: 14px 32px !important;
-    font-size: 1rem;
-    margin-top: 18px;
-    width: 100%;
-    max-width: 260px;
-    box-shadow: none;
-    text-align: center;
-}
-
-.btnWhatsapp:hover {
-    background: #faca5d !important;
-    color: #100f30 !important;
-}
-
-@media (max-width: 1100px) {
-    .cardsGrid {
-        gap: 20px;
+    @media (max-width: 768px) {
+      padding: 0 16px;
     }
+  }
 
-    .card {
-        min-width: 260px;
-        max-width: 320px;
-        padding: 32px 16px 24px 16px;
-    }
-}
+  .header {
+    margin-bottom: 60px;
 
-@media (max-width: 700px) {
-    .contactBox {
-        padding: 24px 4px 32px 4px;
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
     }
 
     .title {
-        font-size: 1.5rem;
+      text-align: left;
+      color: #1c1c1c;
+      max-width: 800px;
+      margin: 0;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 40px;
+      margin-bottom: 16px;
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        line-height: 28px;
+      }
+
+      .highlight {
+        color: #f59e0b;
+      }
+    }
+  }
+
+  .formContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .form {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    padding: 48px;
+    width: 100%;
+    max-width: 600px;
+
+    @media (max-width: 768px) {
+      padding: 32px 24px;
+      border-radius: 12px;
     }
 
-    .subtitle {
-        font-size: 1rem;
-        margin-bottom: 24px;
+    @media (max-width: 480px) {
+      padding: 24px 16px;
+    }
+  }
+
+  .formGroup {
+    margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+  }
+
+  .required {
+    color: #e53e3e;
+    margin-left: 2px;
+  }
+
+  .input,
+  .phoneInput,
+  .select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    background: white;
+    transition: all 0.2s ease;
+
+    &:focus {
+      outline: none;
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
     }
 
-    .cardsGrid {
-        flex-direction: column;
+    &::placeholder {
+      color: #999;
+    }
+
+    @media (max-width: 768px) {
+      padding: 14px;
+      font-size: 16px; // Prevent zoom on iOS
+    }
+  }
+
+  .inputError {
+    border-color: #e53e3e;
+
+    &:focus {
+      border-color: #e53e3e;
+      box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+    }
+  }
+
+  .phoneInputGroup {
+    display: flex;
+    width: 100%;
+    position: relative;
+
+    &:focus-within {
+      .countrySelector {
+        border-color: #f59e0b;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+      }
+      
+      .phoneInput {
+        border-color: #f59e0b;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+      }
+    }
+  }
+
+  .countrySelector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 12px;
+    border: 1px solid #E0E0E0;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    background: #f8f9fa;
+    min-width: 120px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #e9ecef;
+    }
+
+    &:focus-within {
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      padding: 14px 10px;
+      min-width: 100px;
+    }
+
+    .flag {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .countryCode {
+      font-size: 14px;
+      color: #666;
+      font-weight: 500;
+    }
+
+    .dropdownArrow {
+      width: 12px;
+      height: 8px;
+      color: #666;
+      margin-left: auto;
+      transition: transform 0.2s ease;
+      
+      &:hover {
+        color: #333;
+      }
+    }
+
+    .countryDropdown {
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      right: -1px;
+      background: white;
+      border: 1px solid #E0E0E0;
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+
+      .countryOption {
+        display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 8px;
+        padding: 12px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #f8f9fa;
+        }
+
+        &:last-child {
+          border-radius: 0 0 8px 8px;
+        }
+
+        .flag {
+          font-size: 16px;
+        }
+
+        .countryName {
+          flex: 1;
+          font-size: 14px;
+          color: #333;
+        }
+
+        .countryCode {
+          font-size: 12px;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  .phoneInput {
+    border-radius: 0 8px 8px 0;
+    border-left: none;
+  }
+
+  .select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    padding-right: 40px;
+
+    option {
+      color: #333;
+    }
+  }
+
+  .termsGroup {
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .termsLabel {
+    font-size: 12px;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+
+  .checkboxContainer {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #E0E0E0;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    &:checked {
+      background-color: #f59e0b;
+    border-color: #f59e0b;
     }
 
-    .card {
-        min-width: 90vw;
-        max-width: 98vw;
-        padding: 24px 8px 20px 8px;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+    }
+  }
+
+  .checkboxLabel {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    cursor: pointer;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+
+  .link {
+    color: #D97706;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+ 
+
+  .errorMessage {
+    display: block;
+    color: #e53e3e;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+
+  .submitMessage {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+
+    &.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
     }
 
-    .iconCircle {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 16px;
+    &.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
     }
-
-    .cardBtn {
-        padding: 10px 18px;
-        font-size: 0.95rem;
-    }
-
-    .whatsappCard {
-        max-width: 98vw;
-        padding: 28px 6vw 28px 6vw !important;
-    }
-
-    .btnWhatsapp {
-        font-size: 1.05rem;
-        padding: 14px 0 !important;
-        width: 100%;
-        min-width: 0;
-    }
-
-    .iconWhatsapp {
-        width: 54px !important;
-        height: 54px !important;
-    }
+  }
 }

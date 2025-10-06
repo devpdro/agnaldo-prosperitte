@@ -1,53 +1,17 @@
-import LOGO from './LOGO.png'
-import CASA from './CASA.jpg'
-import CARRO from './CARRO.jpg'
-import CONSTRUCAO from './CONSTRUCAO.jpg'
-import CAMINHAO from './CAMINHAO.jpg'
-import PESSOA_COM_CELULAR from './PESSOA_COM_CELULAR.jpg'
-import AGILIDADE from './AGILIDADE.jpg'
-import ATENCAO_CLIENTE from './ATENCAO_CLIENTE.jpg'
-import EMPRESA from './EMPRESA.jpg'
-import SEGURANCA from './SEGURANCA.jpg'
-import TRANSPARENCIA from './TRANSPARENCIA.jpg'
-import ANCORA from './ANCORA.jpeg'
-import EMBRACON from './EMBRACON.webp'
-import HS from './HS.webp'
-import SANTANDER from './SANTANDER.webp'
-import RODOBENS from './RODOBENS.png'
-import HEADER from './HEADER.webp'
-import TENDENCIAS from './TENDENCIAS.jpg'
-import GOLPES from './GOLPES.jpg'
-import PLANEJAMENTO from './PLANEJAMENTO.jpg'
-import QUATRO_VEICULOS_NOVOS_HYNDAI from './4_VEICULOS_NOVOS_HYNDAI.webp'
-import IMPOSTO_COMPRA_CARRO from './IMPOSTO_COMPRA_CARRO.webp'
-import EQUIPE from './EQUIPE.jpg'
-import AGNALDO from './agnaldo.png'
+import CAMBIO from './CAMBIO.png'
+import HEADER from './HEADER.jpg'
+import VALORIZACAO from './VALORIZACAO.png'
+import METROPOLES from './METROPOLES.png'
+import G1 from './G1.png'
+import UOL from './UOL.png'
 
 const IMAGE = {
-  AGNALDO,
-  EQUIPE,
-  QUATRO_VEICULOS_NOVOS_HYNDAI,
-  IMPOSTO_COMPRA_CARRO,
-  TENDENCIAS,
-  PLANEJAMENTO,
-  GOLPES,
+  CAMBIO,
   HEADER,
-  ANCORA,
-  EMBRACON,
-  HS,
-  SANTANDER,
-  RODOBENS,
-  LOGO,
-  CASA,
-  CARRO,
-  CONSTRUCAO,
-  CAMINHAO,
-  PESSOA_COM_CELULAR,
-  AGILIDADE,
-  ATENCAO_CLIENTE,
-  EMPRESA,
-  SEGURANCA,
-  TRANSPARENCIA,
+  VALORIZACAO,
+  METROPOLES,
+  G1,
+  UOL,
 }
 
 export default IMAGE

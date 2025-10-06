@@ -1,82 +1,93 @@
-import styles from './testimonials.module.scss';
+import { Button } from 'src/presentation/components';
 
-const testimonialsData = [
-    {
-        id: 1,
-        name: 'Marcos Fontes',
-        location: 'Texas, USA',
-        photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face&auto=format',
-        title: 'Recomendo',
-        testimonial: 'Comecei pagando 50% em um 2021. Hoje já como um dos meus bancos favorit que ajudou com a Referência Capital. O 1º Fortaleza e até os pagos ainda não vejo um bom.'
-    },
-    {
-        id: 2,
-        name: 'Roberta Silveira',
-        location: 'Minas, Canada',
-        photo: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face&auto=format',
-        title: 'Parabéns!',
-        testimonial: 'Excelente! Eu finalmente não responsabilidade desde então de investir chamado por Silvia. Por isso mesmo de renda, melhor ou deixar para investir. Eu recomendo muito, parabéns pela, em 7 anos, vou saber quanto para meus investimentos.'
-    },
-    {
-        id: 3,
-        name: 'Márcia Fontes',
-        location: 'Texas, USA',
-        photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face&auto=format',
-        title: 'Realizei meu sonho!',
-        testimonial: 'Obrigado pela orientação! Consegui obter lucros! "Então não precisava ver investimento junto aos grandes diferente, mas agora eu tenho uma casa própria. Eu falo muito! Por 2 anos, paguei um crédito no total até mais comprei uma casa para minha casa aos no Brasil! Posso ajudar outros família. Não tem preço.'
-    }
+import S from './testimonials.module.scss';
+
+interface TestimonialData {
+  id: number;
+  name: string;
+  location: string;
+  title: string;
+  content: string;
+  avatar: string;
+}
+
+interface TestimonialsProps {
+  className?: string;
+}
+
+const testimonialsData: TestimonialData[] = [
+  {
+    id: 1,
+    name: 'Marcos Fontes',
+    location: 'Texas, USA',
+    title: 'Recomendo',
+    content: 'Comecei pagando $295,00 em 2021. Hoje já estou no meu terceiro imóvel junto com a Referência Capital. O 1º apartamento que adquiri está alugado em Fortaleza e ele já se paga e ainda me sobra um lucro.',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face&auto=format'
+  },
+  {
+    id: 2,
+    name: 'Roobaldo Silveira',
+    location: 'Toronto, Canadá',
+    title: 'Parabéns!',
+    content: 'Eu sempre fui totalmente desacreditado dessa coisa de investir olhando pro futuro. Por pressão da minha mulher eu decidi investir no meu imóvel e hoje temos um patrimônio que, em 7 anos, vai estar quitado para nossa aposentadoria.',
+    avatar: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?w=100&h=100&fit=crop&crop=face&auto=format'
+  },
+  {
+    id: 3,
+    name: 'Carlos Mendes',
+    location: 'Lisboa, Portugal',
+    title: 'Realizei meu sonho!',
+    content: 'Todo mês arrumava um imprevisto para não guardar dinheiro, mas sabia que a gente tem um boleto pra pagar tudo muda! Em 2 anos, peguei um crédito de 500 mil reais comprei uma casa pros meus pais no Brasil! Poder ajudar minha família não tem preço',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format'
+  }
 ];
 
-export default function Testimonials() {
-    return (
-        <section className={styles.testimonialsSection}>
-            <div className={styles.container}>
-                <div className={styles.header}>
-                    <h2 className={styles.title}>
-                        Conheça quem já <strong>investiu</strong> conosco
-                    </h2>
-                    <p className={styles.subtitle}>
-                        Veja relatos reais de investidores que transformaram seus sonhos em realidade com nossa 
-                        ajuda. Conheça suas histórias e inspire-se para dar o próximo passo.
-                    </p>
-                </div>
+const Testimonials: React.FC<TestimonialsProps> = ({ className }) => {
+  return (
+    <section className={`${S.testimonialsSection} ${className || ''}`}>
+      <div className={S.container}>
+        <div className={S.header}>
+          <h2 className={S.title}>
+            Conheça quem já <span className={S.highlight}>investiu</span> conosco
+          </h2>
+          <p className={S.subtitle}>
+            Veja relatos reais de investidores que transformaram seus sonhos em realidade com nossa 
+            ajuda. Conheça suas histórias e inspire-se para dar o próximo passo.
+          </p>
+        </div>
 
-                <div className={styles.testimonialsGrid}>
-                    {testimonialsData.map((testimonial) => (
-                        <div key={testimonial.id} className={styles.testimonialCard}>
-                            <div className={styles.cardHeader}>
-                                <img 
-                                    src={testimonial.photo} 
-                                    alt={testimonial.name}
-                                    className={styles.profilePhoto}
-                                />
-                                <div className={styles.profileInfo}>
-                                    <h4 className={styles.profileName}>
-                                        {testimonial.name}
-                                    </h4>
-                                    <p className={styles.profileLocation}>
-                                        {testimonial.location}
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <h3 className={styles.testimonialTitle}>
-                                {testimonial.title}
-                            </h3>
-                            
-                            <p className={styles.testimonialText}>
-                                {testimonial.testimonial}
-                            </p>
-                        </div>
-                    ))}
+        <div className={S.testimonialsGrid}>
+          {testimonialsData.map((testimonial) => (
+            <div key={testimonial.id} className={S.testimonialCard}>
+              <div className={S.cardHeader}>
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.name}
+                  className={S.avatar}
+                />
+                <div className={S.userInfo}>
+                  <h3 className={S.name}>{testimonial.name}</h3>
+                  <p className={S.location}>{testimonial.location}</p>
                 </div>
-
-                <div className={styles.ctaContainer}>
-                    <button className={styles.ctaButton}>
-                        Saiba Mais
-                    </button>
-                </div>
+              </div>
+              
+              <h4 className={S.testimonialTitle}>{testimonial.title}</h4>
+              <p className={S.testimonialText}>{testimonial.content}</p>
             </div>
-        </section>
-    );
-}
+          ))}
+        </div>
+
+        <div className={S.ctaContainer}>
+          <Button
+            typeStyle="btn1"
+            label="Saiba Mais"
+            size="md"
+            width="200px"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;

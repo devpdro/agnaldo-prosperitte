@@ -1,4 +1,4 @@
-import { Meta, Footer } from "src/presentation/components"
+import { Meta } from "src/presentation/components"
 
 import S from './terms-of-use.module.scss'
 
@@ -62,7 +62,7 @@ const TermsOfUse = () => {
                     </p>
                 </div>
             </div>
-            <Footer />
+       
         </div>
     )
 }

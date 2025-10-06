@@ -1,0 +1,162 @@
+.tabSection {
+  padding: 80px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.075rem;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    .tabNav {
+      display: flex;
+      gap: 0;
+      margin-bottom: 60px;
+      border-bottom: 1px solid #e5e7eb;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      position: relative;
+
+      @media (max-width: 768px) {
+        margin-bottom: 40px;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        height: 2px;
+        background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 1px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+        opacity: 0;
+      }
+
+      .indicator {
+        position: absolute;
+        bottom: -1px;
+        height: 3px;
+        background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+        border-radius: 2px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 2;
+      }
+
+      .tabButton {
+        font-family: "Gellix", sans-serif;
+        background: none;
+        border: none;
+        padding: 16px 24px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #6b7280;
+        cursor: pointer;
+        position: relative;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+        border-bottom: 2px solid transparent;
+
+        @media (max-width: 768px) {
+          padding: 14px 20px;
+          font-size: 16px;
+        }
+
+        &:hover {
+          color: #374151;
+        }
+
+        &.active {
+          color: #1f2937;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: flex-start;
+
+      @media (max-width: 1184px) {
+        gap: 60px;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .textContent {
+        .title {
+          color: #1c1c1c;
+          font-size: 40px;
+          font-weight: 500;
+          line-height: 40px;
+          margin-bottom: 24px;
+
+          @media (max-width: 768px) {
+            font-size: 22px;
+            line-height: 28px;
+          }
+        }
+
+        .description {
+          font-family: 'Domine', sans-serif;
+          color: #4b5563;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+
+      .imageContent {
+        .imageCard {
+          position: relative;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+          background: #ffffff;
+          border: 1px solid #e5e7eb;
+
+          @media (max-width: 768px) {
+            border-radius: 12px;
+          }
+
+          .image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: scale(1.02);
+
+              @media (max-width: 768px) {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

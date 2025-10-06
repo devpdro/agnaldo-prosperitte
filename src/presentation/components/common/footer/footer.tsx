@@ -1,97 +1,75 @@
-import Link from 'next/link'
-import S from './footer.module.scss'
+import S from './footer.module.scss';
 
-const Footer = () => {
+interface FooterProps {
+  className?: string;
+}
+
+export default function Footer({ className }: FooterProps) {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className={S.footer}>
-      {/* Main Footer Content */}
-      <div className={S.mainContent}>
-        <div className={S.grid}>
-          {/* Left Column - Logo and Slogan */}
-          <div className={S.leftColumn}>
-            <div className={S.logoSection}>
-              <h2>
-                Referência Capital
-              </h2>
-              <p>
-                Investimento imobiliário feito sob medida para os brasileiros no exterior.
-              </p>
-            </div>
-          </div>
-
-          {/* Right Column - Contact and Office */}
-          <div className={S.rightColumn}>
-            {/* Contact Section */}
-            <div className={S.contactSection}>
-              <h3>Contato</h3>
-              <div className={S.contactInfo}>
-                <p>
-                  Telefone: +55 (11) 3042-2004
-                </p>
-                <p>
-                  WhatsApp: +55 (11) 99942-2006
-                </p>
-                <p>
-                  Email: contato@referenciacapital.com.br
-                </p>
-              </div>
-            </div>
-
-            {/* Office Section */}
-            <div className={S.officeSection}>
-              <h3>Nosso escritório</h3>
-              <div className={S.officeInfo}>
-                <p>Rua Dr. Melo Alves, 350 - Jardim Paulista</p>
-                <p>São Paulo - SP, CEP: 01417-010 - Brasil</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Divider */}
-      <div className={S.divider}></div>
-
-      {/* Bottom Footer - Legal Text */}
-      <div className={S.bottomFooter}>
-        <div className={S.bottomContent}>
-          {/* Disclaimer */}
-          <div className={S.disclaimer}>
-            <p>
-              A Referência Capital não é uma instituição financeira e não realiza operações de crédito diretamente. 
-              Atua como correspondente bancário nos termos da Resolução 3.954, do Banco Central do Brasil, na 
-              intermediação e prospecção de propostas de operações de crédito e de arrendamento mercantil, 
-              bem como na realização de recebimentos, pagamentos e outras atividades decorrentes de contratos 
-              de operações de crédito ou de arrendamento mercantil de responsabilidade dos bancos parceiros. 
-              A intermediação de operações de câmbio é de responsabilidade de instituições devidamente autorizadas 
-              pelo Banco Central do Brasil.
+    <footer className={`${S.footerSection} ${className || ''}`}>
+      <div className={S.container}>
+        {/* Seção principal com 3 colunas */}
+        <div className={S.mainContent}>
+          {/* Coluna 1 - Logo e descrição */}
+          <div className={S.column}>
+            <p className={S.description}>
+              Investimento imobiliário feito sob medida para os brasileiros no exterior.
             </p>
           </div>
 
-          {/* Copyright and Links */}
-          <div className={S.copyrightSection}>
-            <div className={S.copyrightText}>
-              <p>
-                Copyright © 2024 Referência Capital - CNPJ: 12.345.678/0001-90
-              </p>
-              <p>
-                Rua Dr. Melo Alves, 350 - Jardim Paulista, São Paulo - SP
-              </p>
+          {/* Coluna 2 - Contato */}
+          <div className={S.column}>
+            <h3 className={S.columnTitle}>Contato</h3>
+            <div className={S.contactInfo}>
+              <p>Telefone: +55 4004 2588</p>
+              <p>WhatsApp: +55 (61) 99422 5359</p>
+              <p>Email: contato@referenciacapital.com.br</p>
             </div>
-            <div className={S.legalLinks}>
-              <Link href="/terms-of-use">
-                Termos de Uso
-              </Link>
-              <span className={S.separator}>|</span>
-              <Link href="/privacy-policy">
-                Políticas de Privacidade
-              </Link>
+          </div>
+
+          {/* Coluna 3 - Escritório */}
+          <div className={S.column}>
+            <h3 className={S.columnTitle}>Nosso escritório</h3>
+            <div className={S.officeInfo}>
+              <p>
+                QS 01, Rua 210, Torre B, Taguatinga Shopping,<br />
+                Lote 40, 13° Andar, Sala 1305/1308 - Águas<br />
+                Claras - DF
+              </p>
             </div>
           </div>
         </div>
+
+        {/* Linha divisória */}
+        <div className={S.divider}></div>
+
+        {/* Texto institucional */}
+        <div className={S.institutionalText}>
+          <p>
+            A Referência Capital não é uma instituição financeira e não realiza operações de crédito diretamente. Nós somos uma plataforma que atua como correspondente bancário para facilitar o processo de contratação de empréstimos. Como correspondente bancário, seguimos as diretrizes estabelecidas pelo Banco Central do Brasil, conforme a Resolução nº 3.954/2011. Nosso objetivo é conectar você às melhores opções de crédito disponíveis no mercado, sempre com transparência e segurança.
+          </p>
+        </div>
+
+        {/* Rodapé final */}
+        <div className={S.finalFooter}>
+          <p>
+            Copyright © {currentYear}. A Referência Capital está inscrita no CNPJ sob o nº 44.118.658/0001-76 e exime-se de responsabilidade por danos sofridos por seus clientes, por força de falha de serviços disponibilizados por terceiros. Ainda que destaque que toda comunicação através de nossos canais oficiais é feita de forma transparente e segura. QS 01, Rua 210, Torre B, Taguatinga Shopping, Lote 40, 13° Andar, Sala 1305/1308 - Águas Claras - DF. A Referência Capital é parte da Referência Holding.
+          </p>
+        </div>
+
+        {/* Link de termos */}
+        <div className={S.termsLink}>
+          <a href="#" className={S.link}>
+            Termos de Uso
+          </a>
+          <span className={S.separator}> | </span>
+          <a href="#" className={S.link}>
+            Políticas de Privacidade
+          </a>
+        </div>
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer

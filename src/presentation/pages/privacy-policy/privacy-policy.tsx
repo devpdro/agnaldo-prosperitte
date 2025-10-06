@@ -1,4 +1,4 @@
-import { Meta, Footer } from "src/presentation/components"
+import { Meta } from "src/presentation/components"
 
 import S from './privacy-policy.module.scss'
 
@@ -61,7 +61,6 @@ const PrivacyPolicy = () => {
                     </p>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
