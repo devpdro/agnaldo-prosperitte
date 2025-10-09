@@ -26,13 +26,13 @@ const tabsData: TabContent[] = [
     id: 'consultoria',
     title: 'Consultoria estratégica para investir com confiança',
     description: 'Com uma abordagem personalizada e baseada em planejamento patrimonial, nossa consultoria te orienta desde o primeiro passo até a realização do seu investimento. Você contará com especialistas que entendem as particularidades de quem vive fora do país, incluindo câmbio, documentação, estrutura jurídica e oportunidades de alavancagem via consórcio. Tudo de forma transparente, segura e alinhada aos seus objetivos de longo prazo.',
-    image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=350&fit=crop&auto=format'
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=350&fit=crop&auto=format'
   },
   {
     id: 'investimento',
     title: 'Segurança, valorização e alavancagem no Brasil',
     description: 'O mercado imobiliário brasileiro continua sendo uma das formas mais sólidas e seguras de construção patrimonial. Para quem vive fora do país, o cenário é ainda mais vantajoso: o câmbio favorável e a possibilidade de alavancar seu poder de compra com consórcios permitem acessar imóveis valorizados, sem recorrer a financiamentos caros. Garanta retorno estável com segurança jurídica, flexibilidade de pagamento e acompanhamento estratégico em cada etapa.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=350&fit=crop&auto=format'
+    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=350&fit=crop&auto=format'
   },
   {
     id: 'valorizacao',
