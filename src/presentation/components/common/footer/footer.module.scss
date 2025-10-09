@@ -1,7 +1,8 @@
 .footerSection {
   width: 100%;
   padding: 60px 0 40px 0;
-  border-top: 1px solid #f3f4f6;
+  background-color: #1f2937; // Fundo escuro para contraste com logo branco
+  border-top: 1px solid #374151;
 
   .container {
     max-width: 1280px;
@@ -33,8 +34,15 @@
         display: flex;
         flex-direction: column;
 
+        .logo {
+          margin-bottom: 0.875rem;
+          img {
+            width: 170px;
+          }
+        }
+
         .description {
-          color: #6b7280;
+          color: #d1d5db; // Texto claro para contraste com fundo escuro
           font-size: 16px;
           line-height: 20px;
           max-width: 400px;
@@ -44,14 +52,14 @@
         .columnTitle {
           font-size: 18px;
           font-weight: 600;
-          color: #1c1c1c;
+          color: #f9fafb; // Título em branco para contraste
           margin: 0 0 16px 0;
         }
 
         .contactInfo,
         .officeInfo {
           p {
-            color: #000000;
+            color: #d1d5db; // Texto claro para informações de contato
             font-size: 14px;
             line-height: 1.6;
             margin: 0 0 8px 0;
@@ -67,7 +75,7 @@
     .divider {
       width: 100%;
       height: 1px;
-      background-color: #eaeaea;
+      background-color: #4b5563; // Divisor mais claro para contraste
       margin: 40px 0;
 
       @media (max-width: 768px) {
@@ -83,7 +91,7 @@
       }
 
       p {
-        color: #9ca3af;
+        color: #9ca3af; // Mantendo cor cinza clara para texto institucional
         font-size: 12px;
         line-height: 1.6;
         margin: 0;
@@ -99,7 +107,7 @@
       }
 
       p {
-        color: #9ca3af;
+        color: #9ca3af; // Mantendo cor cinza clara para footer final
         font-size: 11px;
         line-height: 1.5;
         margin: 0;
@@ -111,19 +119,19 @@
       text-align: center;
 
       .link {
-        color: #6b7280;
+        color: #d1d5db; // Links em cor clara
         font-size: 12px;
         text-decoration: underline;
         transition: color 0.2s ease;
 
         &:hover {
-          color: #374151;
+          color: #f9fafb; // Hover em branco
           text-decoration: underline;
         }
       }
 
       .separator {
-        color: #6b7280;
+        color: #9ca3af; // Separador em cinza claro
         font-size: 12px;
         margin: 0 8px;
       }

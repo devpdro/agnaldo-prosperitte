@@ -1,10 +1,11 @@
 import { Button } from 'src/presentation/components';
+import { scrollToSection } from 'src/utils/scrollToSection';
 
-import { 
-  MdClose, 
-  MdTrendingUp, 
-  MdSecurity, 
-  MdPayment 
+import {
+  MdTrendingUp,
+  MdHome,
+  MdAttachMoney,
+  MdPayment
 } from 'react-icons/md';
 
 import S from './benefits.module.scss';
@@ -23,27 +24,27 @@ interface BenefitsProps {
 const benefitsData: BenefitItem[] = [
   {
     id: 1,
-    icon: <MdClose size={48} />,
-    title: 'Sem entrada',
-    description: 'Comece seu investimento imobiliário sem precisar dar uma grande entrada. Nosso plano permite que você aproveite as oportunidades de investimento predeterminadas, facilitando o acesso à propriedade sem barreiras financeiras iniciais.'
+    icon: <MdTrendingUp size={48} />,
+    title: 'Alavancagem Financeira',
+    description: 'Multiplique seu potencial de investimento utilizando estratégias inteligentes que permitem fazer mais com menos. Alcance grandes objetivos com pequenos aportes iniciais.'
   },
   {
     id: 2,
-    icon: <MdTrendingUp size={48} />,
-    title: 'Menores taxas de juros',
-    description: 'Aproveite taxas de juros baixas e transforme o câmbio favorável em grandes economias. Invista sua compra mais inteligente.'
+    icon: <MdHome size={48} />,
+    title: 'Alavancagem Patrimonial',
+    description: 'Construa patrimônio com segurança, mesmo longe do Brasil. Invista em imóveis valorizados sem precisar pagar o valor total do bem.'
   },
   {
     id: 3,
-    icon: <MdSecurity size={48} />,
-    title: 'Sem burocracia',
-    description: 'Descomplicamos o processo de compra no exterior, eliminando trâmites excessivos para que você invista com facilidade e rapidez.'
+    icon: <MdAttachMoney size={48} />,
+    title: 'Renda Passiva',
+    description: 'Garanta geração de renda através de investimentos imobiliários planejados. Receba mensalmente e construa um futuro mais tranquilo.'
   },
   {
     id: 4,
     icon: <MdPayment size={48} />,
-    title: 'Parcelas a partir de R$ 2.000,00',
-    description: 'Inicie seu investimento com parcelas mensais a partir de apenas R$ 2.000. Oferecemos flexibilidade para que você invista na medida sem comprometer seu orçamento.'
+    title: 'Parcelas a partir de R$ 1.397,36',
+    description: 'Comece agora com parcelas acessíveis. Essa condição é ideal para quem quer investir com responsabilidade, sem comprometer o orçamento.'
   }
 ];
 
@@ -53,10 +54,10 @@ export default function Benefits({ className }: BenefitsProps) {
       <div className={S.container}>
         <div className={S.header}>
           <h2 className={S.title}>
-            Inicie sua jornada com nossas <span className={S.highlight}>soluções personalizadas</span> de investimento.
+            Investir no Brasil ficou mais <span className={S.highlight}>fácil, seguro e personalizado</span>
           </h2>
           <p className={S.subtitle}>
-            Conectamos seu investimento imobiliário ao início da sua jornada de capitalização, para garantir rendimentos seguros para uma vida confortável no Brasil.
+            Aproveite o câmbio favorável e transforme seu poder de compra em patrimônio. Conte com nossa consultoria estratégica para começar agora, mesmo morando fora.
           </p>
         </div>
 
@@ -76,11 +77,12 @@ export default function Benefits({ className }: BenefitsProps) {
 
         <div className={S.ctaContainer}>
           <Button
-            typeStyle="btn1"
-            label="Saiba Mais"
-            size="md"
-            width="200px"
-          />
+          typeStyle="btn1"
+          label="Saiba Mais"
+          size="md"
+          width="200px"
+          onClick={() => scrollToSection('contact')}
+        />
         </div>
       </div>
     </section>

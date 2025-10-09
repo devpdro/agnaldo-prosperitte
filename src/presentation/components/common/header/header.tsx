@@ -1,4 +1,5 @@
 import { Button } from 'src/presentation/components'
+import { scrollToSection } from 'src/utils/scrollToSection'
 
 import S from './header.module.scss'
 
@@ -8,19 +9,18 @@ const Header = () => (
       <div className={S.content}>
         <div className={S.text}>
           <h1 className={S.title}>
-            Invista de forma <span className={S.highlight}>Inteligente</span> em imóveis e{' '}
-            <span className={S.highlight}>aumente sua renda</span> com aluguéis
+            Use o poder da sua <span className={S.highlight}>moeda forte</span> para construir{' '}
+            <span className={S.highlight}>patrimônio no Brasil</span>
           </h1>
           <p className={S.subtitle}>
-            A diversificação patrimonial do setor imobiliário
-            cria futuro financeiro com o que sempre foi a
-            base da riqueza no Brasil.
+            Brasileiros no exterior estão ampliando sua renda e construindo patrimônio com imóveis de alto valor e planejamento estratégico
           </p>
           <Button
             typeStyle="btn1"
-            label="Solicitar proposta"
+            label="Quero meu plano personalizado"
             size="md"
-            width="240px"
+            width="360px"
+            onClick={() => scrollToSection('contact')}
           />
         </div>
       </div>

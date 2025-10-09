@@ -147,9 +147,18 @@ const Contact: React.FC = () => {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (response.ok) {
         setSubmitMessage('Mensagem enviada com sucesso!');
         reset();
+        
+        // Redirect to thank you page
+        if (result.redirect) {
+          setTimeout(() => {
+            window.location.href = result.redirect;
+          }, 1500);
+        }
       } else {
         setSubmitMessage('Erro ao enviar mensagem. Tente novamente.');
       }
@@ -161,12 +170,12 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section className={S.contactSection}>
+    <section id="contact" className={S.contactSection}>
       <div className={S.container}>
         <div className={S.header}>
           <h2 className={S.title}>
-            Entre em contato e descubra como{' '}
-            <span className={S.highlight}>maximizar seus investimentos imobiliários.</span>
+            Preencha seus dados e fale com um{' '}
+            <span className={S.highlight}>especialista em investimentos no Brasil.</span>
           </h2>
         </div>
 
@@ -303,7 +312,7 @@ const Contact: React.FC = () => {
 
             <Button
               typeStyle="btn1"
-              label={isSubmitting ? 'ENVIANDO...' : 'QUERO COMEÇAR AGORA'}
+              label={isSubmitting ? 'ENVIANDO...' : 'FALAR COM UM ESPECIALISTA AGORA'}
               size="md"
               width="100%"
               onClick={handleSubmit(onSubmit)}

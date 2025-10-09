@@ -19,26 +19,26 @@ const tabsData: TabContent[] = [
   {
     id: 'cambio',
     title: 'Beneficie-se do câmbio favorável agora',
-    description: 'Maximize seu poder de compra com o câmbio vantajoso. Investir no Brasil enquanto está no exterior nunca foi tão acessível. Aproveite a força da sua moeda para fazer investimentos inteligentes sem comprometer suas economias.',
+    description: 'Viver fora do Brasil e ganhar em moeda forte é uma vantagem, mas investir esse capital com estratégia é o que realmente gera patrimônio. Com o câmbio atual, seu dinheiro vale muito mais no Brasil. E através da alavancagem patrimonial via consórcio, você amplia ainda mais seu acesso a imóveis de alto padrão com parcelas reduzidas e sem burocracia bancária. Essa é a hora de transformar sua renda em um legado duradouro.',
     image: IMAGE.CAMBIO.src
   },
   {
-    id: 'sem-experiencia',
-    title: 'Perfeito para iniciantes',
-    description: 'Não tem experiência em investimentos? Sem problema. Nossa equipe oferece consultoria completa desde o primeiro passo, com educação financeira, planejamento personalizado e acompanhamento contínuo.',
+    id: 'consultoria',
+    title: 'Consultoria estratégica para investir com confiança',
+    description: 'Com uma abordagem personalizada e baseada em planejamento patrimonial, nossa consultoria te orienta desde o primeiro passo até a realização do seu investimento. Você contará com especialistas que entendem as particularidades de quem vive fora do país, incluindo câmbio, documentação, estrutura jurídica e oportunidades de alavancagem via consórcio. Tudo de forma transparente, segura e alinhada aos seus objetivos de longo prazo.',
     image: 'https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=500&h=350&fit=crop&auto=format'
   },
   {
     id: 'investimento',
-    title: 'Um dos investimentos mais seguros',
-    description: 'Desfrute da segurança que o mercado imobiliário brasileiro oferece. Com o câmbio atual favorável, seu dinheiro rende mais, permitindo que você invista em propriedades de valor crescente sem comprometer suas reservas financeiras. Garanta um retorno estável e seguro para o futuro.',
-    image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=350&fit=crop&auto=format'
+    title: 'Segurança, valorização e alavancagem no Brasil',
+    description: 'O mercado imobiliário brasileiro continua sendo uma das formas mais sólidas e seguras de construção patrimonial. Para quem vive fora do país, o cenário é ainda mais vantajoso: o câmbio favorável e a possibilidade de alavancar seu poder de compra com consórcios permitem acessar imóveis valorizados, sem recorrer a financiamentos caros. Garanta retorno estável com segurança jurídica, flexibilidade de pagamento e acompanhamento estratégico em cada etapa.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=350&fit=crop&auto=format'
   },
   {
     id: 'valorizacao',
-    title: 'Valorização duradoura',
-    description: 'Invista em um futuro seguro e lucrativo. Com o mercado imobiliário brasileiro, seu capital não só está protegido, mas também possui grandes chances de valorização contínua e significativa ao longo dos anos.',
-    image: IMAGE.VALORIZACAO.src
+    title: 'Valorize seu capital em uma economia em crescimento',
+    description: 'O setor imobiliário brasileiro segue em expansão e quem investe com visão estratégica, colhe valorização no longo prazo. Com nosso acompanhamento, você identifica os melhores momentos e oportunidades para transformar seu investimento em fonte de renda e valorização constante. Seu dinheiro trabalha por você, mesmo morando fora.',
+    image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&h=350&fit=crop&auto=format'
   }
 ];
 
@@ -90,7 +90,7 @@ export default function TabSection({ className }: TabSectionProps) {
               onClick={() => handleTabClick(tab.id)}
             >
               {tab.id === 'cambio' && 'Câmbio'}
-              {tab.id === 'sem-experiencia' && 'Sem experiência'}
+              {tab.id === 'consultoria' && 'Consultoria'}
               {tab.id === 'investimento' && 'Investimento'}
               {tab.id === 'valorizacao' && 'Valorização'}
             </button>

@@ -1,4 +1,4 @@
-import { Meta, Header, VSL, TabSection, Benefits, MediaTestimonials, Contact, Testimonials, Footer } from "src/presentation/components"
+import { Meta, Header, VSL, TabSection, Benefits, Contact, Testimonials, Footer } from "src/presentation/components"
 
 import { ICON } from 'src/presentation/assets'
 
@@ -16,13 +16,12 @@ const Home = () => {
       <VSL />
       <TabSection />
       <Benefits />
-      <MediaTestimonials />
       <Contact />
       <Testimonials />
       <Footer />
-      
+
       <a
-        href="https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria."
+        href="https://api.whatsapp.com/send?phone=5519982483244&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria."
         target="_blank"
         rel="noopener noreferrer"
         className={S['whatsapp-button']}

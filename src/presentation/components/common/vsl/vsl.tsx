@@ -19,7 +19,7 @@ export default function VSL({ className }: VSLProps) {
               <p className={S.placeholderText}>Vídeo será inserido aqui</p>
             </div>
           </div>
-          
+
           {/* Texto embaixo dividido em duas colunas */}
           <div className={S.textContent}>
             <div className={S.leftColumn}>
@@ -27,14 +27,10 @@ export default function VSL({ className }: VSLProps) {
                 Transforme seu <span className={S.highlight}>futuro</span> com imóveis no Brasil
               </h2>
             </div>
-            
+
             <div className={S.rightColumn}>
               <p className={S.description}>
-                Investir em imóveis no Brasil representa uma oportunidade de crescimento de 
-                capital e geração de renda passiva, especialmente com o câmbio favorável 
-                para quem vive no exterior. Nossa expertise e sólidas parcerias bancárias 
-                facilitam seu acesso a esse mercado promissor, assegurando um processo 
-                simplificado e rentável.
+                Construir patrimônio no Brasil é uma forma inteligente de preservar valor e criar oportunidades futuras mesmo morando fora. Com planejamento estratégico e consórcios regulados, você pode alavancar seu capital de forma estruturada, acessando imóveis de alto padrão com parcelas reduzidas e sem depender de bancos tradicionais.
               </p>
             </div>
           </div>

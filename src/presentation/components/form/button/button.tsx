@@ -27,14 +27,14 @@ const Button = ({ typeStyle, label, width, onClick, icon, size = 'md', id }: But
 
   const getResponsiveWidthVars = (width: string | { base?: string; sm?: string; md?: string; lg?: string; xs?: string } | undefined): CSSProperties => {
     if (!width) return {};
-    if (typeof width === 'string') return { ['--btn-width' as any]: width };
+    if (typeof width === 'string') return { '--btn-width': width } as CSSProperties;
     return {
-      ['--btn-width' as any]: width.base || width.lg || 'auto',
-      ['--btn-width-xs' as any]: width.xs,
-      ['--btn-width-sm' as any]: width.sm,
-      ['--btn-width-md' as any]: width.md,
-      ['--btn-width-lg' as any]: width.lg,
-    };
+      '--btn-width': width.base || width.lg || 'auto',
+      '--btn-width-xs': width.xs,
+      '--btn-width-sm': width.sm,
+      '--btn-width-md': width.md,
+      '--btn-width-lg': width.lg,
+    } as CSSProperties;
   };
 
   const combinedClass = `${S.btn} ${buttonClasses[typeStyle]} ${sizeClasses[size]}`;

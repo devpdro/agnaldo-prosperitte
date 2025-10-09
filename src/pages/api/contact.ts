@@ -42,7 +42,11 @@ export default async function handler(
       `,
     });
 
-    return res.status(200).json({ message: 'E-mail enviado com sucesso', data });
+    return res.status(200).json({ 
+      message: 'E-mail enviado com sucesso', 
+      data,
+      redirect: '/obrigado'
+    });
   } catch (error) {
     console.error('Erro ao enviar e-mail:', error);
     return res.status(500).json({ message: 'Erro interno do servidor' });
