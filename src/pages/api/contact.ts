@@ -26,11 +26,10 @@ export default async function handler(
   try {
     const data = await resend.emails.send({
       from: 'contato@patrimoniosemfronteiras-br.com',
-      to: ['euvictorhugopedro@gmail.com'],
+      to: ['tomsic@prosperitteconsult.com.br'],
       subject: `Novo contato: ${nome}`,
       html: `
         <div style="font-family: 'Inter', 'Gellix', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f7f7f7;">
-          <!-- Header com logo/branding -->
           <div style="text-align: center; margin-bottom: 30px;">
             <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 20px; border-radius: 15px 15px 0 0;">
               <h1 style="color: white; margin: 0; font-size: 24px; font-weight: 600; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">
