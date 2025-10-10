@@ -7,9 +7,9 @@ import S from '../styles/obrigado.module.scss';
 
 declare global {
   interface Window {
-    fbq: any;
-    gtag: any;
-    dataLayer: any;
+    fbq: (action: string, event: string, params?: Record<string, unknown>) => void;
+    gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+    dataLayer: Array<Record<string, unknown>>;
   }
 }
 

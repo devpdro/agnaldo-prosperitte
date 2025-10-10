@@ -162,7 +162,7 @@ const Contact: React.FC = () => {
       } else {
         setSubmitMessage('Erro ao enviar mensagem. Tente novamente.');
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage('Erro ao enviar mensagem. Tente novamente.');
     } finally {
       setIsSubmitting(false);

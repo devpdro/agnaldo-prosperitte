@@ -54,7 +54,7 @@ export default function Footer({ className }: FooterProps) {
         <div className={S.institutionalText}>
           <p>Aviso Legal:</p>
           <p>
-            A Prosperitté Consult, CNPJ nº 49.290.287/0001-20, não é uma instituição financeira. Atuamos como correspondente autorizado junto a Administradoras de Consórcio, conforme a Resolução nº 3.954/2011 do Banco Central do Brasil. ⭐ Não ofertamos crédito direto nem garantimos contemplação imediata. A contratação está sujeita à análise e política de crédito da instituição parceira. ⭐ Antes da adesão, todas as condições serão apresentadas de forma clara, incluindo prazos, taxas e riscos.
+            A Prosperitté Consult, CNPJ nº 49.290.287/0001-20, não é uma instituição financeira. Atuamos como correspondente autorizado junto a Administradoras de Consórcio, conforme a Resolução nº 3.954/2011 do Banco Central do Brasil. Não ofertamos crédito direto nem garantimos contemplação imediata. A contratação está sujeita à análise e política de crédito da instituição parceira. Antes da adesão, todas as condições serão apresentadas de forma clara, incluindo prazos, taxas e riscos.
           </p>
         </div>
 
