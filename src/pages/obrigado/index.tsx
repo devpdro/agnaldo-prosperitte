@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { MdCheckCircle, MdEmail, MdHome } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
-import S from '../styles/obrigado.module.scss';
+import S from '../../styles/obrigado.module.scss';
 
 declare global {
   interface Window {
@@ -62,7 +62,7 @@ export default function Obrigado() {
           </div>
 
           <h1 className={S.title}>Obrigado pelo seu interesse!</h1>
-          
+
           <p className={S.subtitle}>
             Recebemos suas informações com sucesso. Nossa equipe de especialistas em investimentos no Brasil entrará em contato em breve.
           </p>
@@ -88,6 +88,14 @@ export default function Obrigado() {
               <span>tomsic@prosperitteconsult.com.br</span>
             </div>
           </div>
+
+          <button 
+            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982483244&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria.', '_blank')}
+            className={S.whatsappButton}
+          >
+            <FaWhatsapp size={20} />
+            Falar com Especialista
+          </button>
 
           <button onClick={handleBackToHome} className={S.backButton}>
             <MdHome size={20} />

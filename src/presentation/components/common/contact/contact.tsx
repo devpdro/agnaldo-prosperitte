@@ -152,13 +152,6 @@ const Contact: React.FC = () => {
       if (response.ok) {
         setSubmitMessage('Mensagem enviada com sucesso!');
         reset();
-        
-        // Redirect to thank you page
-        if (result.redirect) {
-          setTimeout(() => {
-            window.location.href = result.redirect;
-          }, 1500);
-        }
       } else {
         setSubmitMessage('Erro ao enviar mensagem. Tente novamente.');
       }
@@ -166,6 +159,11 @@ const Contact: React.FC = () => {
       setSubmitMessage('Erro ao enviar mensagem. Tente novamente.');
     } finally {
       setIsSubmitting(false);
+      
+      // Sempre redirecionar para a página de obrigado, independente do resultado
+      setTimeout(() => {
+        window.location.href = '/obrigado';
+      }, 1500);
     }
   };
 

@@ -7,8 +7,8 @@ const PrivacyPolicy = () => {
         <div>
             <Meta
                 title="Política de Privacidade | Agnaldo Tomsic"
-                description="Saiba como a Tomsic Consultoria protege seus dados pessoais e respeita sua privacidade."
-                keywords="Política de Privacidade, LGPD, privacidade, dados pessoais, Tomsic Consultoria, Agnaldo Tomsic"
+                description="Saiba como Agnaldo Tomsic protege seus dados pessoais e respeita sua privacidade."
+                keywords="Política de Privacidade, LGPD, privacidade, dados pessoais, Agnaldo Tomsic, consultoria financeira"
             />
             <div className={S.privacyPolicyContainer}>
                 <div className={S.privacyPolicyContent}>
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
                         <li>Acesso, correção ou exclusão de informações pessoais</li>
                         <li>Revogação de consentimento para uso de dados</li>
                     </ul>
-                    <p>Solicitações podem ser feitas pelo e-mail: contato@tomsic-consultoria.com</p>
+                    <p>Solicitações podem ser feitas pelo e-mail: contato@patrimoniosemfronteiras-br.com</p>
 
                     <h2>5. SEGURANÇA DOS DADOS</h2>
                     <p>Adotamos medidas de segurança técnicas e organizacionais adequadas para proteger seus dados contra acessos não autorizados, perda ou alteração indevida.</p>
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
                     <p>Esta Política de Privacidade pode ser atualizada a qualquer momento, sendo recomendada a revisão periódica.</p>
 
                     <p className={S.privacyFinal}>
-                        Tomsic Consultoria — Todos os direitos reservados
+                        Agnaldo Tomsic — Todos os direitos reservados
                     </p>
                     <p className={S.privacyVersao}>
                         Versão 1.0 — Atualizada em 27 de maio de 2025

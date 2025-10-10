@@ -152,6 +152,36 @@
   }
 }
 
+.whatsappButton {
+  background: #25d366;
+  color: $color-snow;
+  border: none;
+  border-radius: $radii-default;
+  padding: 1rem 2rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: $weight-medium;
+  cursor: pointer;
+  transition: $transition-default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto 1rem auto;
+  width: 100%;
+
+  &:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
 .backButton {
   background: #f59e0b;
   color: $color-snow;

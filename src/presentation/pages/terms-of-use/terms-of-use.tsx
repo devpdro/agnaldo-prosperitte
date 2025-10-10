@@ -7,8 +7,8 @@ const TermsOfUse = () => {
         <div>
             <Meta
                 title="Termos de Uso | Agnaldo Tomsic"
-                description="Termos e Condições de Uso da Tomsic Consultoria. Regras para utilização do site e conteúdos."
-                keywords="Termos de Uso, LGPD, Tomsic Consultoria, regras do site, Agnaldo Tomsic"
+                description="Termos e Condições de Uso de Agnaldo Tomsic. Regras para utilização do site e conteúdos."
+                keywords="Termos de Uso, LGPD, Agnaldo Tomsic, regras do site, consultoria financeira"
             />
             <div className={S.privacyPolicyContainer}>
                 <div className={S.privacyPolicyContent}>
@@ -39,7 +39,7 @@ const TermsOfUse = () => {
 
                     <h2>5. LIMITAÇÃO DE RESPONSABILIDADE</h2>
                     <p>
-                        A Tomsic Consultoria não se responsabiliza por decisões tomadas pelo usuário com base em informações do site sem orientação profissional individualizada.
+                        Agnaldo Tomsic não se responsabiliza por decisões tomadas pelo usuário com base em informações do site sem orientação profissional individualizada.
                         <br /><br />
                         Resultados financeiros ou patrimoniais mencionados em materiais são exemplos hipotéticos ou projeções, não garantias de retorno.
                     </p>
@@ -55,7 +55,7 @@ const TermsOfUse = () => {
                     </p>
 
                     <p className={S.privacyFinal}>
-                        Tomsic Consultoria — Todos os direitos reservados
+                        Agnaldo Tomsic — Todos os direitos reservados
                     </p>
                     <p className={S.privacyVersao}>
                         Versão 1.0 — Atualizada em 27 de maio de 2025
