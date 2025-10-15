@@ -291,8 +291,6 @@ const Contact: React.FC = () => {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
-
       if (response.ok) {
         setSubmitMessage('Mensagem enviada com sucesso!');
         reset();
