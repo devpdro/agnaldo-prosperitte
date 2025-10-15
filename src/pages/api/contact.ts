@@ -26,7 +26,7 @@ export default async function handler(
   try {
     const data = await resend.emails.send({
       from: 'contato@patrimoniosemfronteiras-br.com',
-      to: ['victorh.pedr@gmail.com'],
+      to: ['tomsic@prosperitteconsult.com.br'],
       subject: `Novo contato: ${nome}`,
       html: `
         <div style="font-family: 'Inter', 'Gellix', Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f7f7f7;">
