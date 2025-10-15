@@ -275,7 +275,7 @@ const Contact: React.FC = () => {
 
     // Remove a formatação para o valor do formulário
     const cleanValue = e.target.value.replace(/\D/g, '');
-    setValue('whatsapp', cleanValue);
+    setValue('whatsapp', `${selectedCountry.dialCode}${cleanValue}`);
   };
 
   const onSubmit = async (data: FormData) => {
@@ -404,7 +404,7 @@ const Contact: React.FC = () => {
                   value={whatsappValue}
                   onChange={handleWhatsAppChange}
                 />
-                <input type="hidden" {...register('whatsapp')} value={whatsappValue.replace(/\D/g, '')} />
+                <input type="hidden" {...register('whatsapp')} value={`${selectedCountry.dialCode}${whatsappValue.replace(/\D/g, '')}`} />
               </div>
               {errors.whatsapp && (
                 <span className={S.errorMessage}>{errors.whatsapp.message}</span>
