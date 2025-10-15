@@ -14,10 +14,15 @@ export default function VSL({ className }: VSLProps) {
         <div className={S.content}>
           {/* Vídeo em cima */}
           <div className={S.videoPlaceholder}>
-            <div className={S.placeholderContent}>
-              <div className={S.playButton}>▶</div>
-              <p className={S.placeholderText}>Vídeo será inserido aqui</p>
-            </div>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/wONXZdAesb0?rel=0&modestbranding=1"
+              title="VSL - Agnaldo Tomsic"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
 
           {/* Texto embaixo dividido em duas colunas */}

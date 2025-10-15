@@ -43,6 +43,23 @@ export default function Obrigado() {
     }
   }, []);
 
+  // Abrir WhatsApp automaticamente quando a página for acessada com ?whatsapp=true
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { whatsapp } = router.query;
+
+    if (whatsapp === 'true') {
+      const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20enviar%20meus%20dados%20e%20gostaria%20de%20falar%20com%20um%20especialista.';
+      const timer = setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          window.open(whatsappUrl, '_blank');
+        }
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [router.isReady, router.query]);
+
   const handleBackToHome = () => {
     router.push('/');
   };
@@ -81,7 +98,7 @@ export default function Obrigado() {
             <p >Dúvidas urgentes?</p>
             <div className={S.contactItem}>
               <FaWhatsapp size={18} color="#25D366" />
-              <span>+55 19 98248-3244</span>
+              <span>+55 19 98243-5337</span>
             </div>
             <div className={S.contactItem}>
               <MdEmail size={18} color="#f59e0b" />
@@ -90,7 +107,7 @@ export default function Obrigado() {
           </div>
 
           <button 
-            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982483244&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria.', '_blank')}
+            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria.', '_blank')}
             className={S.whatsappButton}
           >
             <FaWhatsapp size={20} />

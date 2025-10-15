@@ -21,7 +21,7 @@ const Home = () => {
       <Footer />
 
       <a
-        href="https://api.whatsapp.com/send?phone=5519982483244&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria."
+        href="https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria."
         target="_blank"
         rel="noopener noreferrer"
         className={S['whatsapp-button']}
