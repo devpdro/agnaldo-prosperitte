@@ -40,6 +40,9 @@ fbq('track', 'PageView');`,
           />
         </noscript>
         {/* End Facebook Pixel */}
+        {/* Facebook Domain Verification */}
+        <meta name="facebook-domain-verification" content="56ol730k51wrm4zgktav7tonxiikt2" />
+        {/* End Facebook Domain Verification */}
       </Head>
       <body className="antialiased">
         {/* Google Tag Manager (noscript) */}

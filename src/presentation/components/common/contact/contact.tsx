@@ -139,9 +139,9 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
   const [selectedCountry, setSelectedCountry] = useState<Country>({
-    code: 'br',
-    name: 'Brasil',
-    dialCode: '+55',
+    code: 'us',
+    name: 'Estados Unidos',
+    dialCode: '+1',
   });
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
   const [whatsappValue, setWhatsappValue] = useState('');
@@ -449,7 +449,7 @@ const Contact: React.FC = () => {
 
             <Button
               typeStyle="btn1"
-              label={isSubmitting ? 'ENVIANDO...' : 'FALAR COM UM ESPECIALISTA AGORA'}
+              label={isSubmitting ? 'ENVIANDO...' : 'ENVIAR INFORMAÇÕES'}
               size="md"
               width="100%"
               onClick={handleSubmit(onSubmit)}

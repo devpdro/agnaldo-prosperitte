@@ -49,7 +49,7 @@ export default function Obrigado() {
     const { whatsapp } = router.query;
 
     if (whatsapp === 'true') {
-      const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20enviar%20meus%20dados%20e%20gostaria%20de%20falar%20com%20um%20especialista.';
+      const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20fazer%20meu%20cadastro%20no%20site%20da%20Prosperitt%C3%A9%20e%20quero%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.';
       const timer = setTimeout(() => {
         if (typeof window !== 'undefined') {
           window.open(whatsappUrl, '_blank');
@@ -107,17 +107,14 @@ export default function Obrigado() {
           </div>
 
           <button 
-            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20tenho%20interesse%20em%20uma%20consultoria.', '_blank')}
+            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20fazer%20meu%20cadastro%20no%20site%20da%20Prosperitt%C3%A9%20e%20quero%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.', '_blank')}
             className={S.whatsappButton}
           >
             <FaWhatsapp size={20} />
-            Falar com Especialista
+            FALAR COM ESPECIALISTA AGORA NO WHATSAPP
           </button>
 
-          <button onClick={handleBackToHome} className={S.backButton}>
-            <MdHome size={20} />
-            Voltar ao início
-          </button>
+          {/* Botão de voltar removido conforme solicitação */}
         </div>
       </div>
     </>
