@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { MdCheckCircle, MdEmail, MdHome } from 'react-icons/md';
+import { MdCheckCircle, MdEmail } from 'react-icons/md';
 import { FaWhatsapp } from 'react-icons/fa';
 import S from '../../styles/obrigado.module.scss';
 
@@ -60,9 +60,7 @@ export default function Obrigado() {
     }
   }, [router.isReady, router.query]);
 
-  const handleBackToHome = () => {
-    router.push('/');
-  };
+  // Função handleBackToHome removida por não ser mais utilizada
 
   return (
     <>
