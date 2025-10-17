@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { MdCheckCircle, MdEmail } from 'react-icons/md';
@@ -15,6 +15,8 @@ declare global {
 
 export default function Obrigado() {
   const router = useRouter();
+  const [whatsAppStarted, setWhatsAppStarted] = useState(false);
+  const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20gostaria%20de%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.';
 
   useEffect(() => {
     // Facebook Pixel Conversion Event
@@ -43,22 +45,45 @@ export default function Obrigado() {
     }
   }, []);
 
-  // Abrir WhatsApp automaticamente quando a página for acessada com ?whatsapp=true
+  // Abrir WhatsApp automaticamente quando a página for acessada com ?whatsapp=true (em 1s)
   useEffect(() => {
     if (!router.isReady) return;
     const { whatsapp } = router.query;
 
     if (whatsapp === 'true') {
-      const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20fazer%20meu%20cadastro%20no%20site%20da%20Prosperitt%C3%A9%20e%20quero%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.';
       const timer = setTimeout(() => {
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && !whatsAppStarted) {
           window.open(whatsappUrl, '_blank');
+          setWhatsAppStarted(true);
         }
       }, 1000);
 
       return () => clearTimeout(timer);
     }
-  }, [router.isReady, router.query]);
+  }, [router.isReady, router.query, whatsAppStarted]);
+
+  // Fallback: após 5s, se o usuário não clicou, abrir WhatsApp automaticamente
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { whatsapp } = router.query;
+
+    // Se já vamos abrir por causa do parâmetro, não iniciar fallback
+    if (whatsapp === 'true') return;
+
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined' && !whatsAppStarted) {
+        window.open(whatsappUrl, '_blank');
+        setWhatsAppStarted(true);
+      }
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [router.isReady, router.query, whatsAppStarted]);
+
+  const handleWhatsAppClick = () => {
+    if (!whatsAppStarted) setWhatsAppStarted(true);
+    window.open(whatsappUrl, '_blank');
+  };
 
   // Função handleBackToHome removida por não ser mais utilizada
 
@@ -105,14 +130,16 @@ export default function Obrigado() {
           </div>
 
           <button 
-            onClick={() => window.open('https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20acabei%20de%20fazer%20meu%20cadastro%20no%20site%20da%20Prosperitt%C3%A9%20e%20quero%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.', '_blank')}
+            onClick={handleWhatsAppClick}
             className={S.whatsappButton}
           >
             <FaWhatsapp size={20} />
             FALAR COM ESPECIALISTA AGORA NO WHATSAPP
           </button>
 
-          {/* Botão de voltar removido conforme solicitação */}
+          <p style={{ marginTop: '12px', color: '#6b7280', fontSize: '14px', textAlign: 'center' }}>
+            Mensagem que será enviada: "Olá, gostaria de entender melhor como funciona essa estratégia de investimento imobiliário."
+          </p>
         </div>
       </div>
     </>
