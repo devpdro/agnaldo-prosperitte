@@ -1,6 +1,8 @@
 'use client';
 
-import React from 'react';
+import { Button } from 'src/presentation/components';
+import { scrollToSection } from 'src/utils/scrollToSection'
+
 import S from './vsl.module.scss';
 
 interface VSLProps {
@@ -17,13 +19,21 @@ export default function VSL({ className }: VSLProps) {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/wONXZdAesb0?rel=0&modestbranding=1"
+              src="https://www.youtube.com/embed/wONXZdAesb0?rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3&playsinline=1"
               title="VSL - Agnaldo Tomsic"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+              allowFullScreen={false}
             />
           </div>
+
+          <Button
+            typeStyle="btn1"
+            label="Agende sua Consultoria Gratuita"
+            size="md"
+            width="380px"
+            onClick={() => scrollToSection('contact')}
+          />
 
           {/* Texto embaixo dividido em duas colunas */}
           <div className={S.textContent}>

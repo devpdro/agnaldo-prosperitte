@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { MdCheckCircle, MdEmail } from 'react-icons/md';
@@ -15,7 +15,8 @@ declare global {
 
 export default function Obrigado() {
   const router = useRouter();
-  const [whatsAppStarted, setWhatsAppStarted] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const hasOpenedRef = useRef<boolean>(false);
   const whatsappUrl = 'https://api.whatsapp.com/send?phone=5519982435337&text=Ol%C3%A1%2C%20gostaria%20de%20entender%20melhor%20como%20funciona%20essa%20estrat%C3%A9gia%20de%20investimento%20imobili%C3%A1rio.';
 
   useEffect(() => {
@@ -45,53 +46,27 @@ export default function Obrigado() {
     }
   }, []);
 
-  // Abrir WhatsApp automaticamente quando a página for acessada com ?whatsapp=true (em 1s)
+  // Removido redirecionamento especial quando ?whatsapp=true
+
+  // Auto-redirecionamento após 5s (sempre): se não houver interação, encaminha para WhatsApp
   useEffect(() => {
     if (!router.isReady) return;
-    const { whatsapp } = router.query;
-
-    if (whatsapp === 'true') {
-      const timer = setTimeout(() => {
-        if (typeof window !== 'undefined' && !whatsAppStarted) {
-          window.open(whatsappUrl, '_blank');
-          setWhatsAppStarted(true);
-        }
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [router.isReady, router.query, whatsAppStarted]);
-
-  // Fallback: após 5s, se o usuário não clicou, abrir WhatsApp automaticamente
-  useEffect(() => {
-    if (!router.isReady) return;
-    const { whatsapp } = router.query;
-
-    // Se já vamos abrir por causa do parâmetro, não iniciar fallback
-    if (whatsapp === 'true') return;
 
     const timer = setTimeout(() => {
-      if (typeof window !== 'undefined' && !whatsAppStarted) {
-        window.open(whatsappUrl, '_blank');
-        setWhatsAppStarted(true);
+      if (!hasOpenedRef.current) {
+        hasOpenedRef.current = true;
+        window.location.href = whatsappUrl;
       }
-    }, 5000);
+    }, 7000);
 
     return () => clearTimeout(timer);
-  }, [router.isReady, router.query, whatsAppStarted]);
-
-  const handleWhatsAppClick = () => {
-    if (!whatsAppStarted) setWhatsAppStarted(true);
-    window.open(whatsappUrl, '_blank');
-  };
-
-  // Função handleBackToHome removida por não ser mais utilizada
+  }, [router.isReady]);
 
   return (
     <>
       <Head>
         <title>Obrigado - Prosperitté Consult</title>
-        <meta name="description" content="Obrigado pelo seu interesse! Em breve entraremos em contato." />
+        <meta name="description" content="Seu cadastro foi recebido com sucesso! Agora falta o passo mais importante: Agendar sua consultoria gratuita." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
@@ -104,18 +79,20 @@ export default function Obrigado() {
           <h1 className={S.title}>Obrigado pelo seu interesse!</h1>
 
           <p className={S.subtitle}>
-            Recebemos suas informações com sucesso. Nossa equipe de especialistas em investimentos no Brasil entrará em contato em breve.
+            Seu cadastro foi recebido com sucesso! Agora falta o passo mais importante: Agendar sua consultoria gratuita.
           </p>
 
-          <div className={S.infoBox}>
-            <h3>O que acontece agora?</h3>
-            <ul>
-              <li><MdCheckCircle size={20} color="#10B981" /> Analisaremos seu perfil de investimento</li>
-              <li><MdCheckCircle size={20} color="#10B981" /> Prepararemos uma proposta personalizada</li>
-              <li><MdCheckCircle size={20} color="#10B981" /> Entraremos em contato em até 24 horas</li>
-              <li><MdCheckCircle size={20} color="#10B981" /> Agendaremos uma consultoria gratuita</li>
-            </ul>
-          </div>
+          <button 
+            ref={buttonRef}
+            onClick={() => {
+              hasOpenedRef.current = true;
+              window.location.href = whatsappUrl;
+            }}
+            className={S.whatsappButton}
+          >
+            <FaWhatsapp size={20} />
+            Agende sua Consultoria Gratuita
+          </button>
 
           <div className={S.contactInfo}>
             <p >Dúvidas urgentes?</p>
@@ -128,18 +105,6 @@ export default function Obrigado() {
               <span>tomsic@prosperitteconsult.com.br</span>
             </div>
           </div>
-
-          <button 
-            onClick={handleWhatsAppClick}
-            className={S.whatsappButton}
-          >
-            <FaWhatsapp size={20} />
-            FALAR COM ESPECIALISTA AGORA NO WHATSAPP
-          </button>
-
-          <p style={{ marginTop: '12px', color: '#6b7280', fontSize: '14px', textAlign: 'center' }}>
-            Mensagem que será enviada: "Olá, gostaria de entender melhor como funciona essa estratégia de investimento imobiliário."
-          </p>
         </div>
       </div>
     </>

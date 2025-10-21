@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
                     <p>Esta Política de Privacidade pode ser atualizada a qualquer momento, sendo recomendada a revisão periódica.</p>
 
                     <p className={S.privacyFinal}>
-                        Agnaldo Tomsic — Todos os direitos reservados
+                        Tomsic Consultoria — Todos os direitos reservados
                     </p>
                     <p className={S.privacyVersao}>
                         Versão 1.0 — Atualizada em 27 de maio de 2025

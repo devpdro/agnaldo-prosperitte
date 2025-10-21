@@ -17,9 +17,9 @@ const Header = () => (
           </p>
           <Button
             typeStyle="btn1"
-            label="Quero meu plano personalizado"
+            label="Agende sua Consultoria Gratuita"
             size="md"
-            width="360px"
+            width="380px"
             onClick={() => scrollToSection('contact')}
           />
         </div>
