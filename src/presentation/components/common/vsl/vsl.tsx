@@ -17,13 +17,14 @@ export default function VSL({ className }: VSLProps) {
           {/* Vídeo em cima */}
           <div className={S.videoPlaceholder}>
             <iframe
+              src="https://player.vimeo.com/video/1129560033?badge=0&autopause=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479"
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/wONXZdAesb0?rel=0&modestbranding=1&disablekb=1&fs=0&iv_load_policy=3&playsinline=1"
-              title="VSL - Agnaldo Tomsic"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-              allowFullScreen={false}
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title="VSL Final"
+              allowFullScreen
             />
           </div>
 
