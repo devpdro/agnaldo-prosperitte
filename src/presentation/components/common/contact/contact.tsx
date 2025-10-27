@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
+import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
+
 import { Button } from 'src/presentation/components';
+
 import S from './contact.module.scss';
 
 // Bandeiras SVG
